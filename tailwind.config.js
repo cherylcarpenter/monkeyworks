@@ -6,13 +6,15 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                'grid-pattern': "linear-gradient(to bottom, theme('colors.neutral.950 / 0%'), theme('colors.neutral.950 / 100%')), url('/images/noise.png')"
+                'grid-pattern':
+                    "linear-gradient(to bottom, theme('colors.neutral.950 / 10%'), theme('colors.neutral.950 / 100%')), url('/images/noise.png')"
             },
             colors: {
                 neutral: colors.neutral
             },
             fontFamily: {
-                sans: ['Inter', ...defaultTheme.fontFamily.sans]
+                sans: ['Inter', ...defaultTheme.fontFamily.sans],
+                roboto: ['Roboto']
             }
         }
     },
@@ -21,14 +23,14 @@ module.exports = {
             {
                 lofi: {
                     ...require('daisyui/src/theming/themes')['lofi'],
-                    primary: '#2bdcd2',
+                    primary: '#B42033',
                     'primary-content': '#171717',
-                    secondary: '#016968',
+                    secondary: '#3C3B6E',
                     info: '#2bdcd2',
-                    'info-content': '#171717',
+                    'info-content': '#171717'
                 }
             }
         ]
     },
-    plugins: [require('daisyui')]
+    plugins: [require('@tailwindcss/typography'), require('daisyui')]
 };

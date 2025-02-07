@@ -36,7 +36,6 @@ In real-life applications, tags are typically invalidated when data has changed 
 For this functionality to work, Next.js uses the [fine-grained caching headers](https://docs.netlify.com/platform/caching/) available on Netlify - but you can use these features on basically any Netlify site!
 `;
 
-
 export default async function Page() {
     async function revalidateWiki() {
         'use server';

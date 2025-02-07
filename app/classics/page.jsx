@@ -1,4 +1,4 @@
-import { FeedbackForm } from 'components/feedback-form';
+import { ContactForm } from 'components/contactForm';
 import { Markdown } from '../../components/markdown';
 
 export const metadata = {
@@ -23,8 +23,8 @@ export default async function Page() {
         <>
             <h1>Netlify Classics</h1>
             <Markdown content={explainer} />
-            <div className="flex w-full pt-12 justify-center">
-                <FeedbackForm />
+            <div className="flex justify-center pt-12 w-full">
+                <ContactForm />
             </div>
         </>
     );

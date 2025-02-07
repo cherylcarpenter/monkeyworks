@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -14,9 +15,11 @@
         @apply mb-6 text-4xl font-bold tracking-tight md:text-5xl;
     }
 }
-
+@theme {
+    --font-roboto: 'Roboto', sans-serif;
+}
 a {
-    @apply underline
+    /* @apply underline */
 }
 
 .markdown {
@@ -33,4 +36,101 @@ a {
 
 .btn:disabled {
     @apply text-neutral-400 bg-neutral-700;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+nav {
+    a {
+        /* @apply underline; */
+    }
+}
+.mainNav {
+    .navLine {
+        width: 97%;
+        position: absolute;
+        border-width: 0;
+        bottom: 64px;
+        left: 20px;
+        box-shadow: 2px 2px 9px 0px #00000073;
+    }
+}
+.headerLogo {
+    width: 195px;
+    z-index: 1000;
+}
+
+.myHero {
+    background-size: cover;
+    width: 100%;
+    display: block;
+    height: 400px;
+    background-position: center;
+    border: 2px solid black;
+    box-shadow: 2px 2px 9px 0px #00000073;
+    margin-bottom: 2rem;
+    margin-top: -45px;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+.heroText {
+    /* text-align: center; */
+    font-size: 4em;
+    line-height: 1.2;
+}
+
+.productBullets {
+    > * {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        gap: 4rem;
+    }
+    .productFeature {
+        max-height: 400px;
+        width: auto;
+        border: 2px solid black;
+        box-shadow: 2px 2px 9px 0px #00000073;
+    }
+    .rightCol,
+    .leftCol {
+        padding: 1rem 0;
+        justify-content: center;
+    }
+    .rightCol {
+        align-items: flex-end;
+    }
+    .productBullet {
+        display: flex;
+        align-items: center;
+        a {
+            display: inline-flex;
+            align-items: center;
+        }
+    }
+    .bulletNumber {
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        text-align: center;
+        display: flex;
+        line-height: 1;
+        width: 41px;
+        box-shadow: 2px 2px 9px 0px #00000073;
+    }
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+.insideWrapper {
+    min-height: 80vh;
 }

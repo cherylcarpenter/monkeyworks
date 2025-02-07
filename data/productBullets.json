@@ -1,0 +1,18 @@
+[
+    {
+        "position": 1,
+        "bullet": "This is a bullet point"
+    },
+    {
+        "position": 2,
+        "bullet": "Another bullet point"
+    },
+    {
+        "position": 3,
+        "bullet": "Yet another bullet point"
+    },
+    {
+        "position": 4,
+        "bullet": "One more bullet point"
+    }
+]
