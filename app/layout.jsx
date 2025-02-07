@@ -6,7 +6,12 @@ export const metadata = {
     title: {
         template: '%s | Netlify',
         default: 'Netlify Starter'
-    }
+    },
+      robots: {
+        index: false,
+        follow: false,
+        noindex: true,
+      },
 };
 
 export default function RootLayout({ children }) {
