@@ -35,11 +35,11 @@ export function ContactForm() {
     return (
         <form
             name="info"
-            className="flex gap-3 text-black align-center"
+            className="flex flex-wrap gap-3 text-black align-center"
             onSubmit={handleFormSubmit}
             method="POST"
         >
-            <p class="hidden">
+            <p className="hidden">
                 <label>
                     Don’t fill this out if you’re human: <input name="bot-field" />
                 </label>

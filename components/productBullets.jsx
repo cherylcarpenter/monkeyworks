@@ -7,38 +7,54 @@ export function ProductBullets({ children, className, bulletOne, bulletTwo, bull
         >
             <div className="leftCol col">
                 <div className="text-xl productBullet">
-                    {' '}
                     <Link href="/about">
-                        <span className="bg-primary mr-3 p-2 font-bold text-2xl text-center text-white bulletNumber">
+                        <span className="bg-primary mr-3 p-2 font-bold text-base text-center text-white lg:text-2xl bulletNumber">
                             1
                         </span>{' '}
                         {bulletOne}
                     </Link>
                 </div>
-                <div className="text-xl productBullet">
-                    {' '}
+                <div className="flex lg:hidden text-xl productBullet">
                     <Link href="/about">
-                        <span className="bg-primary mr-3 p-2 font-bold text-2xl text-center text-white bulletNumber">
+                        {bulletTwo}{' '}
+                        <span className="bg-primary ml-3 p-2 font-bold text-base text-center text-white lg:text-2xl bulletNumber">
+                            2
+                        </span>
+                    </Link>
+                </div>
+                <div className="text-xl productBullet">
+                    <Link href="/about">
+                        <span className="bg-primary mr-3 p-2 font-bold text-base text-center text-white lg:text-2xl bulletNumber">
                             3
                         </span>{' '}
                         {bulletThree}
                     </Link>
                 </div>
+                <div className="flex lg:hidden text-xl productBullet">
+                    <Link href="/about">
+                        {bulletFour}{' '}
+                        <span className="bg-primary ml-3 p-2 font-bold text-base text-center text-white lg:text-2xl bulletNumber">
+                            4
+                        </span>
+                    </Link>{' '}
+                </div>
             </div>
-            <img className="productFeature" src={image} alt="" />
+            <div className="productFeature">
+                <img src={image} alt="" />
+            </div>
             <div className="rightCol col">
                 <div className="text-xl productBullet">
                     <Link href="/about">
                         {bulletTwo}{' '}
-                        <span className="bg-primary ml-3 p-2 font-bold text-2xl text-center text-white bulletNumber">
+                        <span className="bg-primary ml-3 p-2 font-bold text-base text-center text-white lg:text-2xl bulletNumber">
                             2
                         </span>
-                    </Link>{' '}
+                    </Link>
                 </div>
                 <div className="text-xl productBullet">
                     <Link href="/about">
                         {bulletFour}{' '}
-                        <span className="bg-primary ml-3 p-2 font-bold text-2xl text-center text-white bulletNumber">
+                        <span className="bg-primary ml-3 p-2 font-bold text-base text-center text-white lg:text-2xl bulletNumber">
                             4
                         </span>
                     </Link>{' '}

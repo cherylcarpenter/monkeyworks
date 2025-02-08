@@ -33,7 +33,7 @@ export default function Page() {
     return (
         <>
             <Hero image="/images/istockphoto-916226534-1024x1024.jpg">
-                <h1 className="font-bold text-secondary heroText">
+                <h1 className="font-bold text-roboto text-secondary heroText">
                     Control your booth,
                     <br />
                     hassle-free

@@ -8,7 +8,7 @@ export function Footer() {
         return new Date().getFullYear();
     };
     return (
-        <footer className="pt-16 sm:pt-24 pb-12 sm:pb-16 footer">
+        <footer className="justify-center pt-16 sm:pt-24 pb-12 sm:pb-16 footer">
             {/* <p className="text-sm">
                 <Link
                     href="https://docs.netlify.com/frameworks/next-js/overview/"

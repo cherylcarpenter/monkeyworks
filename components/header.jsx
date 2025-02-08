@@ -11,29 +11,47 @@ const navItems = [
 
 export function Header() {
     return (
-        <nav className="relative flex flex-wrap justify-between items-center gap-4 sm:pt-2 mainNav">
-            <div className="flex items-center gap-4">
+        <nav className="relative flex flex-wrap justify-between items-center gap-2 md:gap-4 mb-4 pt-2 w-full mainNav">
+            <div className="flex items-center gap-2 md:gap-4 w-full">
                 <Link href="/" className="headerLogo">
                     <Image src={monkeyWorksLogo} alt="Netlify logo" />
                 </Link>
-                <span className="font-semibold text-xl">Automotive Paint Booth Controls</span>
-                <hr className="bg-zinc-900 w-1 h-2 navLine" />
+                <div className="flex lg:flex-row flex-col items-center gap-2 md:gap-4 lg:pb-4 w-full navInsideWrapper">
+                    <span className="inline-flex lg:flex w-full font-semibold text-xl">
+                        Automotive Paint Booth Controls
+                    </span>
+                    {!!navItems?.length && (
+                        <ul className="flex flex-wrap lg:justify-end gap-x-4 gap-y-1 mb-2 lg:mb-0 w-full navWrapper">
+                            {navItems.map((item, index) => (
+                                <li key={index}>
+                                    <Link
+                                        href={item.href}
+                                        className="inline-block content-between hover:opacity-80 text-lg lg:text-2xl transition"
+                                    >
+                                        {item.linkText}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    )}
+                </div>
+                {/* <hr className="bg-zinc-900 w-1 h-2 navLine" /> */}
             </div>
 
-            {!!navItems?.length && (
-                <ul className="flex flex-wrap gap-x-4 gap-y-1">
+            {/* {!!navItems?.length && (
+                <ul className="desktopNav lg:flex flex-wrap gap-x-4 gap-y-1 hidden mb-2 lg:mb-0">
                     {navItems.map((item, index) => (
                         <li key={index}>
                             <Link
                                 href={item.href}
-                                className="inline-block content-between hover:opacity-80 px-1.5 sm:px-3 py-1 sm:py-2 text-2xl transition"
+                                className="inline-block content-between hover:opacity-80 px-1.5 md:px-3 py-1 sm:py-2 text-lg lg:text-2xl transition"
                             >
                                 {item.linkText}
                             </Link>
                         </li>
                     ))}
                 </ul>
-            )}
+            )} */}
         </nav>
     );
 }
