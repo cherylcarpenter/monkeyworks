@@ -36,9 +36,9 @@ export function ContactForm() {
         <form
             name="info"
             className="flex gap-3 text-black align-center"
-            netlify-honeypot="bot-field"
-            data-netlify-recaptcha="true"
-            onSubmit={handleFormSubmit}
+            action="/success"
+            method="POST"
+            data-netlify="true"
         >
             <div className="flex flex-col flex-1 gap-4">
                 <input type="hidden" name="form-name" value="info" />
