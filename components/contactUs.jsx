@@ -5,7 +5,7 @@ export default async function ContactUs() {
             <div className="flex flex-wrap justify-center content-center mb-6">
                 <h2 className="text-2xl text-primary">Contact Us:</h2>
                 <span className="flex flex-wrap justify-center content-center ml-4 text-secondary">
-                    We'd love to hear from you! Use the form or call{' '}
+                    We&apos;d love to hear from you! Use the form or call{' '}
                     <a href="tel:1-800-555-5555" className="ml-2">
                         1-800-555-5555
                     </a>

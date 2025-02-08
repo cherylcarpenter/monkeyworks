@@ -36,10 +36,17 @@ export function ContactForm() {
         <form
             name="info"
             className="flex gap-3 text-black align-center"
-            action="/success"
+            onSubmit={handleFormSubmit}
             method="POST"
             data-netlify="true"
+            netlify-honeypot="bot-field"
+            data-netlify-recaptcha="true"
         >
+            <p class="hidden">
+                <label>
+                    Don’t fill this out if you’re human: <input name="bot-field" />
+                </label>
+            </p>
             <div className="flex flex-col flex-1 gap-4">
                 <input type="hidden" name="form-name" value="info" />
                 <input name="name" type="text" placeholder="Name" required className="input-bordered input" />
@@ -55,6 +62,8 @@ export function ContactForm() {
                     className="input-bordered textarea"
                     rows="8"
                 />
+                <div data-netlify-recaptcha="true"></div>
+
                 <button className="btn btn-secondary" type="submit" disabled={status === 'pending'}>
                     Submit
                 </button>
