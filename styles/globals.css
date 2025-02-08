@@ -108,7 +108,7 @@ nav {
         flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
         @media (min-width: 1024px) {
             height: 400px;
             gap: 4rem;
@@ -150,10 +150,13 @@ nav {
         text-align: center;
         display: flex;
         line-height: 1;
-        width: 43px;
+        width: 45px;
         box-shadow: 2px 2px 9px 0px #00000073;
-        @media (min-width: 500px) {
+        @media (min-width: 420px) {
             width: 35px;
+        }
+        @media (min-width: 500px) {
+            width: 30px;
         }
         @media (min-width: 769px) {
             width: 32px;
